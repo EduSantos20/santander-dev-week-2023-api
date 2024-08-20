@@ -45,7 +45,7 @@ public record UserController(UserService userService) {
     @PostMapping
     @Operation(summary = "Create a new user", description = "Create a new user and return the created user's data")
     @ApiResponses(value = { 
-            @ApiResponse(responseCode = "201", description = "User created successfully"),
+            @ApiResponse(responseCode = "201", description = "Users created successfully"),
             @ApiResponse(responseCode = "422", description = "Invalid user data provided")
     })
     public ResponseEntity<UserDto> create(@RequestBody UserDto userDto) {
